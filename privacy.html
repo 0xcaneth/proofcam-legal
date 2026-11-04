@@ -22,18 +22,21 @@
 <nav><a href="index.html">ProofCam</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="support.html">Support</a></nav>
 
 <h1>ProofCam Privacy Policy</h1>
-<p class="meta">Effective November 2, 2026</p>
+<p class="meta">Effective November 4, 2026</p>
 
-<p>ProofCam is built to keep your photos and the information on them on your device. There is no account and no ProofCam server. This policy explains what that means in plain terms.</p>
+<p>ProofCam stores your work records on your device. It has no account system. Optional AI uses a narrowly scoped ProofCam service only when you explicitly request a draft. This policy explains what leaves your device and why.</p>
 
-<h2>No account, no ProofCam server</h2>
-<p>ProofCam has no sign-up and no login. We do not run a backend that receives your photos, locations, or notes. There is nothing for us to see.</p>
+<h2>No account</h2>
+<p>ProofCam has no sign-up and no login. The optional AI service authenticates the app installation and, when applicable, verifies a signed purchase with Apple; it does not create a ProofCam user profile.</p>
 
 <h2>What stays on your device</h2>
-<p>Your photos, GPS coordinates, addresses, notes, logos, and stamped images are stored in ProofCam's own storage on your iPhone. ProofCam does not upload these files to a ProofCam server. If you choose Share or Save to Photos, the selected content is passed to your chosen app or Apple's Photos library. Device backups and Photos synchronization follow your Apple settings.</p>
+<p>Your photos, GPS coordinates, addresses, notes, logos, stamped images, and comparison records are stored in ProofCam's own storage on your iPhone. They stay there unless you explicitly request an AI draft, share or export selected content, or save it to Apple's Photos library. Device backups and Photos synchronization follow your Apple settings.</p>
 
 <h2>Camera</h2>
-<p>The camera is used to take the photos you stamp. Those photos are processed on your device. ProofCam does not send them anywhere.</p>
+<p>The camera is used to take the photos you stamp and compare. Capture, stamping, comparison layout, and manual notes are processed on your device. Camera photos are not sent for AI unless you open the AI disclosure, check availability, and choose Continue.</p>
+
+<h2>Optional AI descriptions</h2>
+<p>When you explicitly request an AI draft, ProofCam creates reduced clean-source JPEGs of the selected before and after photos, removes embedded metadata, and sends those two images plus the note you entered through ProofCam's Cloudflare-hosted service to OpenAI. Capture dates, stored GPS coordinates, addresses, project IDs, photo IDs, and stamped overlays are not added to the AI request. Anything visibly present in a photo or typed in your note is included. Manual notes and exports remain available without AI. Photos are processed in service memory and are not stored by ProofCam's application database. Result text and request identity are retained for up to 7 days for recovery; infrastructure backups may retain result text for up to 30 days. The OpenAI API request uses <code>store:false</code> and API data is not used for training by default, but OpenAI abuse-monitoring retention may apply, commonly for up to 30 days. ProofCam does not promise zero retention or a specific processing region. See <a href="https://developers.openai.com/api/docs/guides/your-data">OpenAI's API data controls</a> and <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.</p>
 
 <h2>Location</h2>
 <p>With your permission, ProofCam reads your location while the app is open to add GPS coordinates and an approximate address to a stamp. Online address lookups send coordinates to Apple's geocoder. If you enable the optional location map, Apple MapKit receives the map region needed to create the map thumbnail. Open in Maps passes the selected location to Apple Maps only when you tap it. These services follow <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. You can use ProofCam without location in time-only mode.</p>
@@ -42,22 +45,19 @@
 <p>ProofCam adds a stamped photo to your photo library only when you tap Save to Photos and grant add-only access. To add a company logo, you can select an image with Apple's photo picker; ProofCam receives only that selected image, not unrestricted access to your library.</p>
 
 <h2>Purchases</h2>
-<p>ProofCam Pro is a one-time purchase processed by Apple's In-App Purchase. To unlock and restore Pro, our payments provider RevenueCat receives purchase information and a pseudonymous app-user identifier. This identifier links purchase activity within ProofCam; it is not used by ProofCam for advertising or tracking across other apps. It is stored in the iOS Keychain and can remain after reinstalling the app. See <a href="https://www.revenuecat.com/privacy/">RevenueCat's</a> and <a href="https://www.apple.com/legal/privacy/">Apple's</a> privacy policies for their purchase-data handling and retention.</p>
+<p>ProofCam Pro is a one-time purchase processed by Apple's In-App Purchase. To unlock and restore Pro, RevenueCat receives purchase information and a pseudonymous app-user identifier. The optional AI service also sends Apple's signed transaction proof to Apple for current-state verification and binds the resulting allowance to an authenticated app installation. These identifiers are not used for advertising or cross-app tracking. See <a href="https://www.revenuecat.com/privacy/">RevenueCat's</a> and <a href="https://www.apple.com/legal/privacy/">Apple's</a> privacy policies.</p>
 
 <h2>Private analytics</h2>
-<p>If you enable Share private analytics in Privacy &amp; About, ProofCam uses privacy-conscious analytics to understand app launches, onboarding, feature use, paywall results, purchases, restores, shares, and export reliability. Analytics events never include photos, GPS coordinates, addresses, note text, filenames, email addresses, or persistent photo IDs. TelemetryDeck receives a pseudonymous device-local identifier that can survive reinstalling, event names, coarse event details, app and device metadata, and hourly-rounded timestamps for analytics only. This is not used to track you across other apps or websites. Private analytics is off by default and can be turned off again at any time. See <a href="https://telemetrydeck.com/privacy/">TelemetryDeck's privacy policy</a>.</p>
-
-<h2>Optional usage and crash reports</h2>
-<p>Share private analytics is optional and off by default. If you enable it in Privacy &amp; About, TelemetryDeck receives the coarse analytics described above and PostHog receives approved app events, event timestamps, app version, device metadata, a random paywall-presentation identifier and a pseudonymous identifier stored in Keychain that may survive reinstalling. RevenueCat receives that PostHog identifier to connect purchase events to app usage. Photos, exact location, addresses, notes and email are not included. Screen recording and automatic screen or text capture are disabled. Turning this option off stops new TelemetryDeck and PostHog app-usage events and requests removal of the PostHog identifier attribute from RevenueCat. This update depends on network delivery. Separately, RevenueCat may send purchase events to PostHog under its purchase identifier for revenue reporting; past records and links follow each provider's retention policy. Share crash reports is independently optional and off by default; when enabled, Firebase Crashlytics receives crash diagnostics, app/device information and its installation identifier. ProofCam adds no customer identifier or photo content to crash reports. Turning crash reports off disables automatic crash-report collection and deletes unsent reports. Contact support for requests concerning previously transmitted data.</p>
+<p>ProofCam uses privacy-conscious analytics to understand app launches, onboarding, feature use, paywall results, purchases, restores, shares, and export reliability. Analytics events never include photos, GPS coordinates, addresses, note text, filenames, email addresses, or persistent photo IDs. TelemetryDeck receives an app-install identifier, event names, coarse event details, app and device metadata, and hourly-rounded timestamps for analytics only. This is not used to track you across other apps or websites. See <a href="https://telemetrydeck.com/privacy/">TelemetryDeck's privacy policy</a>.</p>
 
 <h2>No ad tracking</h2>
-<p>ProofCam contains no advertising SDKs and does no cross-app or cross-site tracking, so it never shows the App Tracking Transparency prompt.</p>
+<p>ProofCam contains no advertising SDKs and does no cross-app or cross-site tracking, so it does not show the App Tracking Transparency prompt.</p>
 
 <h2>Deleting your data</h2>
-<p>You can delete any stamped photo inside ProofCam. Deleting the app removes its local app-container data, but previously exported files, Photos copies, backups, and the Keychain purchase identifier may remain. Apple and RevenueCat retain purchase records under their policies. For a privacy request, contact the address below.</p>
+<p>You can delete any stamped photo or comparison inside ProofCam. Deleting the app removes its local app-container data, but previously exported files, Photos copies, backups, the Keychain purchase identifier, and short-lived AI recovery text held by processors may remain for the retention periods described above. Apple, RevenueCat, Cloudflare, and OpenAI retain data under their applicable policies. For a privacy request, contact the address below.</p>
 
 <h2>Feedback and ratings</h2>
-<p>Feedback is sent only when you choose Send in the mail composer or your email app. Your message and email address are received by support. App and iOS versions are included only if you enable that option; photos, location, and purchase receipts are not attached automatically. Copy feedback writes your draft to the clipboard only when you tap it. Rating requests use Apple's system interface; ProofCam cannot see the rating you submit or whether Apple displayed the prompt.</p>
+<p>Feedback is sent only when you choose Send in the mail composer or your email app. Your message and email address are received by support. App and iOS versions are included only if you enable that option; photos, location, and purchase receipts are not attached automatically. Rating requests use Apple's system interface; ProofCam cannot see the rating you submit or whether Apple displayed the prompt.</p>
 
 <h2>Children</h2>
 <p>ProofCam is a general-purpose work tool and is not directed at children.</p>
@@ -68,6 +68,6 @@
 <h2>Contact</h2>
 <p>Questions about privacy? Email <a href="mailto:canacar192@icloud.com">canacar192@icloud.com</a>.</p>
 
-<footer>ProofCam &middot; A private, on-device proof-photo camera.</footer>
+<footer>ProofCam &middot; Private work-photo documentation with optional AI.</footer>
 </body>
 </html>
